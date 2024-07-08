@@ -1,5 +1,7 @@
 # SimpleMaterialBinTool
 
+<img src="https://github.com/rz-modder/SimpleMaterialBinTool/blob/main/Screenshot_20240708-094007.png"></img>
+
 I made a script that might help you to unpack/pack a dragon render file [I got the source code from here](https://github.com/ddf8196/MaterialBinTool).
 
 # Tutorial
