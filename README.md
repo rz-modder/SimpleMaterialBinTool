@@ -8,22 +8,22 @@
 
 * Open Termux and run the command below:
 
-* Repair termux repository
+1.Repair termux repository
 ```
 termux-change-repo
 ```
 
-* Update available packages
+2.Update available packages
 ```
 pkg update -y && pkg upgrade -y
 ```
 
-* Install the git package
+3.Install the git package
 ```
 pkg install git -y
 ```
 
-* Run the following command to clone the repository
+4.Run the following command to clone the repository
 ```
 git clone https://github.com/rz-modder0/SimpleMaterialBinTool
 ```
