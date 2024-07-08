@@ -1,0 +1,5 @@
+#!/system/bin/sh
+
+#installing java-17
+pkg install openjdk-17 -y
+

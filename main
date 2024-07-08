@@ -1,0 +1,123 @@
+#!/system/bin/sh
+SCRIPT=$(readlink -f "$0")
+baseDir=$(dirname "$SCRIPT")
+if [ ! -d "$baseDir/unpacked" ]; then
+  mkdir unpacked
+fi
+if [ ! -d "$baseDir/repacked" ]; then
+  mkdir repacked
+fi
+if [ ! -d "$baseDir/compiled" ]; then
+  mkdir compiled
+fi
+if [ ! -d "$baseDir/included" ]; then
+  mkdir included
+fi
+
+#script layout
+clear
+echo
+echo "×××××××××××××××××××××××××××××"
+echo "  MaterialBinTool-0.8.2-all  "
+echo "×××××××××××××××××××××××××××××"
+echo "  github.com/rz-modder/SimpleMaterialBinTool"
+echo "  github.com/ddf8196/MaterialBinTool"
+echo
+echo "  1.Unpack material.bin files"
+echo "  2.Repack RenderDragon files"
+echo "  3.Compile RenderDragon files"
+echo "  4.About Script"
+echo "  5.Close"
+echo
+read -p "> " p1
+
+#util function
+sMaterialBin() {
+  fp=""
+  echo
+  read -p "material.bin path: " fp
+}
+
+sUnpackedBin() {
+  dp=""
+  echo
+  read -p "render dragon directory: " dp
+}
+
+#choice function
+if [ $p1 = "1" ]; then
+  while(true)do
+    sMaterialBin
+    if [ "$fp" = "" ]; then
+      echo "- error: please select material.bin files"
+      sMaterialBin
+    fi
+    if [ ! -f "$fp" ]; then
+      echo "- error: please select material.bin files"
+      sMaterialBin
+    fi
+    if [ ! "$fp" = "" ]; then
+      echo
+      java -jar MaterialBinTool.jar -u $fp -o $baseDir/unpacked/
+      echo
+      echo "Unpacked material.bin saved to: "$baseDir"/unpacked/"
+      echo
+      exit 0
+      return
+    fi
+  done
+fi
+
+if [ $p1 = "2" ]; then
+  while(true)do
+    sUnpackedBin
+    if [ "$dp" = "" ]; then
+      echo "- error: please select render dragon directory"
+      sUnpackedBin
+    fi
+    if [ ! -d "$dp" ]; then
+      echo "- error: please select render dragon directory"
+      sUnpackedBin
+    fi
+    if [ ! "$dp" = "" ]; then
+      echo
+      java -jar MaterialBinTool.jar -r $dp -o $baseDir/repacked/
+      echo
+      echo "Repacked render dragon saved to: "$baseDir"/repacked/"
+      echo
+      exit 0
+      return
+    fi
+  done
+fi
+
+if [ $p1 = "3" ]; then
+  while(true)do
+    sUnpackedBin
+    if [ "$dp" = "" ]; then
+      echo "- error: please select render dragon directory"
+      sUnpackedBin
+    fi
+    if [ ! -d "$dp" ]; then
+      echo "- error: please select render dragon directory"
+      sUnpackedBin
+    fi
+    if [ ! "$dp" = "" ]; then
+      echo
+      java -jar MaterialBinTool.jar -s ./shaderc/shaderc.exe -i ./included -c $dp -o $baseDir/compiled/
+      echo
+      echo "Compiled render dragon saved to: "$baseDir"/compiled/"
+      echo
+      exit 0
+      return
+    fi
+  done
+fi
+
+if [ $p1 = "4" ]; then
+  cat aboutme.md
+fi
+
+if [ $p1 = "5" ]; then
+  exit 0
+fi
