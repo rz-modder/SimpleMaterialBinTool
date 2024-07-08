@@ -1,8 +1,8 @@
-<H1 align="center">SimpleMaterialBinTool</H1>
+# SimpleMaterialBinTool
 
 • I made a script that might help you to unpack/pack a dragon render file [I got the source code from here](https://github.com/ddf8196/MaterialBinTool).
 
-<H1 align="center">Tutorial</H1>
+# Tutorial
 
 • Download the Termux application from the [official source]() or from [f-droid]()
 
