@@ -4,7 +4,7 @@ I made a script that might help you to unpack/pack a dragon render file [I got t
 
 # Tutorial
 
-Download the Termux application from the [official source]() or from [f-droid]().
+Download the Termux application from the [official source](https://github.com/termux/termux-app/releases) or from [f-droid](https://f-droid.org/id/packages/com.termux/).
 
 Open Termux and run the command below:
 
