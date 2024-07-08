@@ -7,8 +7,10 @@
 • Download the Termux application from the [official source]() or from [f-droid]()
 
 • Buka termux dan jalankan perintah di bawah ini:
-`termux-change-repo`
-`pkg update -y && pkg upgrade -y`
-`pkg install git -y`
-`git clone https://github.com/rz-modder0/SimpleMaterialBinTool`
+```
+termux-change-repo
+pkg update -y && pkg upgrade -y
+pkg install git -y
+git clone https://github.com/rz-modder0/SimpleMaterialBinTool
+```
 
