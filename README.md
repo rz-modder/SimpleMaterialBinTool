@@ -8,51 +8,51 @@
 
 * Open Termux and run the command below:
 
-• Repair termux repository
+Repair termux repository
 ```
 termux-change-repo
 ```
 
-• Update available packages
+Update available packages
 ```
 pkg update -y && pkg upgrade -y
 ```
 
-• Install the git package
+Install the git package
 ```
 pkg install git -y
 ```
 
-• Run the following command to clone the repository
+Run the following command to clone the repository
 ```
 git clone https://github.com/rz-modder0/SimpleMaterialBinTool
 ```
 
 * Run the command below to open MaterialBinTool:
 
-• Open the folder
+Open the folder
 ```
 cd SimpleMaterialBinTool
 ```
 
-• Before you can run the script, you must run the `installer` first
+Before you can run the script, you must run the `installer` first
 ```
 sh installer
 ```
 
-• After the `installer` finishes installing packages, you need to ensure that the correct packages are installed
+After the `installer` finishes installing packages, you need to ensure that the correct packages are installed
 ```
 java -version
 ```
 
-• If a message like this appears, then the package you installed is correct
+If a message like this appears, then the package you installed is correct
 ```
 openjdk version "17-internal" 2021-09-14
 OpenJDK Runtime Environment (build 17-internal+0-adhoc..src)
 OpenJDK Server VM (build 17-internal+0-adhoc..src, mixed mode)
 ```
 
-• Run the following command to open the main script
+Run the following command to open the main script
 ```
 sh main
 ```
