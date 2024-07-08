@@ -59,7 +59,7 @@ sh main
 
 # Closing
 
-* I got the MaterialBinTool file from [here](https://github.com/ddf8196/MaterialBinTool/release).
+* I got the MaterialBinTool file from [here](https://github.com/ddf8196/MaterialBinTool/releases).
 
 * I made this script just for those of you who are still confused about how to unpack/repack a dragon render file.
 
