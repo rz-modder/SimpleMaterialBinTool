@@ -1,4 +1,4 @@
-<H1 align="center">PojavLauncher</H1>
+<H1 align="center">SimpleMaterialBinTool</H1>
 
-* From [Boardwalk](https://github.com/zhuowei/Boardwalk)'s ashes here comes PojavLauncher!
+* I made a script that might help you to unpack/pack a dragon render file [Boardwalk](https://github.com/zhuowei/Boardwalk)'s ashes here comes PojavLauncher!
 
