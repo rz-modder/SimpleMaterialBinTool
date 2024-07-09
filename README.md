@@ -27,7 +27,7 @@ pkg install git -y
 
 Run the following command to clone the repository
 ```
-git clone https://github.com/rz-modder0/SimpleMaterialBinTool
+git clone https://github.com/rz-modder/SimpleMaterialBinTool
 ```
 
 Run the command below to open MaterialBinTool:
